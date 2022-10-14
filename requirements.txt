@@ -1,0 +1,10 @@
+torch
+torchvision
+mpi4py
+h5py
+wandb
+ruamel.yaml
+tqdm
+timm
+einops
+git+https://github.com/romerojosh/benchy.git
