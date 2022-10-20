@@ -101,7 +101,8 @@ afno_backbone_finetune:
   <<: *backbone
   lr: 1E-4
   # batch_size: 64
-  batch_size: 1
+  # batch_size: 2
+  batch_size: 16
   # log_to_wandb: !!bool True
   log_to_wandb: !!bool False
   max_epochs: 50

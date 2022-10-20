@@ -537,6 +537,8 @@ if __name__ == '__main__':
   parser.add_argument("--config", default='default', type=str)
   parser.add_argument("--enable_amp", action='store_true')
   parser.add_argument("--epsilon_factor", default = 0, type = float)
+    
+  parser.add_argument("--local_rank", default=0, type=int)  # TODO added by Henan
 
   args = parser.parse_args()
 
@@ -576,7 +578,8 @@ if __name__ == '__main__':
   args.resuming = True if os.path.isfile(params.checkpoint_path) else False
 
   params['resuming'] = args.resuming
-  params['local_rank'] = local_rank
+  # params['local_rank'] = local_rank  # TODO commented by Henan
+  params['local_rank'] = args.local_rank  # TODO added by Henan
   params['enable_amp'] = args.enable_amp
 
   # this will be the wandb name

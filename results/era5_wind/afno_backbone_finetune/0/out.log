@@ -1,0 +1,1242 @@
+2022-10-19 03:55:37,030 - root - INFO - --------------- Versions ---------------
+2022-10-19 03:55:37,051 - root - INFO - git branch: b'* master'
+2022-10-19 03:55:37,064 - root - INFO - git hash: b'0038a68515aae33273b1cef88d5ddbec22d5e89b'
+2022-10-19 03:55:37,065 - root - INFO - Torch: 1.10.0
+2022-10-19 03:55:37,065 - root - INFO - ----------------------------------------
+2022-10-19 03:55:37,065 - root - INFO - ------------------ Configuration ------------------
+2022-10-19 03:55:37,065 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-19 03:55:37,065 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-19 03:55:37,065 - root - INFO - lr 0.0001
+2022-10-19 03:55:37,065 - root - INFO - batch_size 64
+2022-10-19 03:55:37,065 - root - INFO - log_to_wandb True
+2022-10-19 03:55:37,065 - root - INFO - max_epochs 50
+2022-10-19 03:55:37,065 - root - INFO - pretrained True
+2022-10-19 03:55:37,065 - root - INFO - two_step_training True
+2022-10-19 03:55:37,065 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 03:55:37,065 - root - INFO - scheduler CosineAnnealingLR
+2022-10-19 03:55:37,066 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 03:55:37,066 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 03:55:37,066 - root - INFO - orography False
+2022-10-19 03:55:37,066 - root - INFO - orography_path None
+2022-10-19 03:55:37,066 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-19 03:55:37,066 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-19 03:55:37,066 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-19 03:55:37,066 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-19 03:55:37,066 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-19 03:55:37,066 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-19 03:55:37,066 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-19 03:55:37,066 - root - INFO - loss l2
+2022-10-19 03:55:37,066 - root - INFO - num_data_workers 4
+2022-10-19 03:55:37,066 - root - INFO - dt 1
+2022-10-19 03:55:37,066 - root - INFO - n_history 0
+2022-10-19 03:55:37,067 - root - INFO - prediction_type iterative
+2022-10-19 03:55:37,067 - root - INFO - prediction_length 41
+2022-10-19 03:55:37,067 - root - INFO - n_initial_conditions 5
+2022-10-19 03:55:37,067 - root - INFO - ics_type default
+2022-10-19 03:55:37,067 - root - INFO - save_raw_forecasts True
+2022-10-19 03:55:37,067 - root - INFO - save_channel False
+2022-10-19 03:55:37,067 - root - INFO - masked_acc False
+2022-10-19 03:55:37,067 - root - INFO - maskpath None
+2022-10-19 03:55:37,067 - root - INFO - perturb False
+2022-10-19 03:55:37,067 - root - INFO - add_grid False
+2022-10-19 03:55:37,067 - root - INFO - N_grid_channels 0
+2022-10-19 03:55:37,067 - root - INFO - gridtype sinusoidal
+2022-10-19 03:55:37,067 - root - INFO - roll False
+2022-10-19 03:55:37,067 - root - INFO - num_blocks 8
+2022-10-19 03:55:37,067 - root - INFO - nettype afno
+2022-10-19 03:55:37,067 - root - INFO - patch_size 8
+2022-10-19 03:55:37,068 - root - INFO - width 56
+2022-10-19 03:55:37,068 - root - INFO - modes 32
+2022-10-19 03:55:37,068 - root - INFO - target default
+2022-10-19 03:55:37,068 - root - INFO - normalization zscore
+2022-10-19 03:55:37,068 - root - INFO - log_to_screen True
+2022-10-19 03:55:37,068 - root - INFO - save_checkpoint True
+2022-10-19 03:55:37,068 - root - INFO - enable_nhwc False
+2022-10-19 03:55:37,068 - root - INFO - optimizer_type FusedAdam
+2022-10-19 03:55:37,068 - root - INFO - crop_size_x None
+2022-10-19 03:55:37,068 - root - INFO - crop_size_y None
+2022-10-19 03:55:37,068 - root - INFO - plot_animations False
+2022-10-19 03:55:37,068 - root - INFO - add_noise False
+2022-10-19 03:55:37,068 - root - INFO - noise_std 0
+2022-10-19 03:55:37,068 - root - INFO - epsilon_factor 0
+2022-10-19 03:55:37,068 - root - INFO - world_size 1
+2022-10-19 03:55:37,068 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-19 03:55:37,069 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-19 03:55:37,069 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-19 03:55:37,069 - root - INFO - resuming False
+2022-10-19 03:55:37,069 - root - INFO - local_rank 0
+2022-10-19 03:55:37,069 - root - INFO - enable_amp True
+2022-10-19 03:55:37,069 - root - INFO - name afno_backbone_finetune_0
+2022-10-19 03:55:37,069 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-19 03:55:37,069 - root - INFO - project ERA5_precip
+2022-10-19 03:55:37,069 - root - INFO - entity flowgan
+2022-10-19 03:55:37,069 - root - INFO - ---------------------------------------------------
+2022-10-19 03:55:57,586 - root - INFO - rank 0, begin data loader init
+2022-10-19 03:55:57,703 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-19 03:55:57,704 - root - INFO - Number of samples per year: 1460
+2022-10-19 03:55:57,704 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-19 03:55:57,705 - root - INFO - Delta t: 6 hours
+2022-10-19 03:55:57,705 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 03:55:57,956 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-19 03:55:57,958 - root - INFO - Number of samples per year: 1460
+2022-10-19 03:55:57,959 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-19 03:55:57,959 - root - INFO - Delta t: 6 hours
+2022-10-19 03:55:57,959 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 03:55:57,960 - root - INFO - rank 0, data loader initialized
+2022-10-19 03:56:02,301 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 03:56:02,754 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-19 03:56:02,755 - root - INFO - Starting Training Loop...
+2022-10-19 05:09:50,402 - root - INFO - --------------- Versions ---------------
+2022-10-19 05:09:50,422 - root - INFO - git branch: b'* master'
+2022-10-19 05:09:50,436 - root - INFO - git hash: b'0038a68515aae33273b1cef88d5ddbec22d5e89b'
+2022-10-19 05:09:50,436 - root - INFO - Torch: 1.10.0
+2022-10-19 05:09:50,436 - root - INFO - ----------------------------------------
+2022-10-19 05:09:50,436 - root - INFO - ------------------ Configuration ------------------
+2022-10-19 05:09:50,436 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-19 05:09:50,436 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-19 05:09:50,436 - root - INFO - lr 0.0001
+2022-10-19 05:09:50,436 - root - INFO - batch_size 64
+2022-10-19 05:09:50,437 - root - INFO - log_to_wandb True
+2022-10-19 05:09:50,437 - root - INFO - max_epochs 50
+2022-10-19 05:09:50,437 - root - INFO - pretrained True
+2022-10-19 05:09:50,437 - root - INFO - two_step_training True
+2022-10-19 05:09:50,437 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 05:09:50,437 - root - INFO - scheduler CosineAnnealingLR
+2022-10-19 05:09:50,437 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 05:09:50,437 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 05:09:50,437 - root - INFO - orography False
+2022-10-19 05:09:50,437 - root - INFO - orography_path None
+2022-10-19 05:09:50,437 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-19 05:09:50,437 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-19 05:09:50,437 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-19 05:09:50,437 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-19 05:09:50,437 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-19 05:09:50,438 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-19 05:09:50,438 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-19 05:09:50,438 - root - INFO - loss l2
+2022-10-19 05:09:50,438 - root - INFO - num_data_workers 4
+2022-10-19 05:09:50,438 - root - INFO - dt 1
+2022-10-19 05:09:50,438 - root - INFO - n_history 0
+2022-10-19 05:09:50,438 - root - INFO - prediction_type iterative
+2022-10-19 05:09:50,438 - root - INFO - prediction_length 41
+2022-10-19 05:09:50,438 - root - INFO - n_initial_conditions 5
+2022-10-19 05:09:50,438 - root - INFO - ics_type default
+2022-10-19 05:09:50,438 - root - INFO - save_raw_forecasts True
+2022-10-19 05:09:50,438 - root - INFO - save_channel False
+2022-10-19 05:09:50,438 - root - INFO - masked_acc False
+2022-10-19 05:09:50,438 - root - INFO - maskpath None
+2022-10-19 05:09:50,438 - root - INFO - perturb False
+2022-10-19 05:09:50,438 - root - INFO - add_grid False
+2022-10-19 05:09:50,439 - root - INFO - N_grid_channels 0
+2022-10-19 05:09:50,439 - root - INFO - gridtype sinusoidal
+2022-10-19 05:09:50,439 - root - INFO - roll False
+2022-10-19 05:09:50,439 - root - INFO - num_blocks 8
+2022-10-19 05:09:50,439 - root - INFO - nettype afno
+2022-10-19 05:09:50,439 - root - INFO - patch_size 8
+2022-10-19 05:09:50,439 - root - INFO - width 56
+2022-10-19 05:09:50,439 - root - INFO - modes 32
+2022-10-19 05:09:50,439 - root - INFO - target default
+2022-10-19 05:09:50,439 - root - INFO - normalization zscore
+2022-10-19 05:09:50,439 - root - INFO - log_to_screen True
+2022-10-19 05:09:50,439 - root - INFO - save_checkpoint True
+2022-10-19 05:09:50,439 - root - INFO - enable_nhwc False
+2022-10-19 05:09:50,439 - root - INFO - optimizer_type FusedAdam
+2022-10-19 05:09:50,439 - root - INFO - crop_size_x None
+2022-10-19 05:09:50,439 - root - INFO - crop_size_y None
+2022-10-19 05:09:50,440 - root - INFO - plot_animations False
+2022-10-19 05:09:50,440 - root - INFO - add_noise False
+2022-10-19 05:09:50,440 - root - INFO - noise_std 0
+2022-10-19 05:09:50,440 - root - INFO - epsilon_factor 0
+2022-10-19 05:09:50,440 - root - INFO - world_size 1
+2022-10-19 05:09:50,440 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-19 05:09:50,440 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-19 05:09:50,440 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-19 05:09:50,440 - root - INFO - resuming False
+2022-10-19 05:09:50,440 - root - INFO - local_rank 0
+2022-10-19 05:09:50,440 - root - INFO - enable_amp True
+2022-10-19 05:09:50,440 - root - INFO - name afno_backbone_finetune_0
+2022-10-19 05:09:50,440 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-19 05:09:50,440 - root - INFO - project ERA5_precip
+2022-10-19 05:09:50,440 - root - INFO - entity flowgan
+2022-10-19 05:09:50,440 - root - INFO - ---------------------------------------------------
+2022-10-19 05:11:23,342 - root - INFO - rank 0, begin data loader init
+2022-10-19 05:11:23,345 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-19 05:11:23,347 - root - INFO - Number of samples per year: 1460
+2022-10-19 05:11:23,347 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-19 05:11:23,347 - root - INFO - Delta t: 6 hours
+2022-10-19 05:11:23,348 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 05:11:23,350 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-19 05:11:23,351 - root - INFO - Number of samples per year: 1460
+2022-10-19 05:11:23,351 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-19 05:11:23,351 - root - INFO - Delta t: 6 hours
+2022-10-19 05:11:23,351 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 05:11:23,352 - root - INFO - rank 0, data loader initialized
+2022-10-19 05:11:32,430 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 05:11:35,547 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-19 05:11:35,548 - root - INFO - Starting Training Loop...
+2022-10-19 05:15:37,891 - root - INFO - --------------- Versions ---------------
+2022-10-19 05:15:37,912 - root - INFO - git branch: b'* master'
+2022-10-19 05:15:37,925 - root - INFO - git hash: b'0038a68515aae33273b1cef88d5ddbec22d5e89b'
+2022-10-19 05:15:37,926 - root - INFO - Torch: 1.10.0
+2022-10-19 05:15:37,926 - root - INFO - ----------------------------------------
+2022-10-19 05:15:37,926 - root - INFO - ------------------ Configuration ------------------
+2022-10-19 05:15:37,926 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-19 05:15:37,926 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-19 05:15:37,926 - root - INFO - lr 0.0001
+2022-10-19 05:15:37,926 - root - INFO - batch_size 4
+2022-10-19 05:15:37,926 - root - INFO - log_to_wandb True
+2022-10-19 05:15:37,926 - root - INFO - max_epochs 50
+2022-10-19 05:15:37,927 - root - INFO - pretrained True
+2022-10-19 05:15:37,927 - root - INFO - two_step_training True
+2022-10-19 05:15:37,927 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 05:15:37,927 - root - INFO - scheduler CosineAnnealingLR
+2022-10-19 05:15:37,927 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 05:15:37,927 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 05:15:37,927 - root - INFO - orography False
+2022-10-19 05:15:37,927 - root - INFO - orography_path None
+2022-10-19 05:15:37,927 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-19 05:15:37,927 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-19 05:15:37,927 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-19 05:15:37,927 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-19 05:15:37,928 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-19 05:15:37,928 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-19 05:15:37,928 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-19 05:15:37,928 - root - INFO - loss l2
+2022-10-19 05:15:37,928 - root - INFO - num_data_workers 4
+2022-10-19 05:15:37,928 - root - INFO - dt 1
+2022-10-19 05:15:37,928 - root - INFO - n_history 0
+2022-10-19 05:15:37,928 - root - INFO - prediction_type iterative
+2022-10-19 05:15:37,928 - root - INFO - prediction_length 41
+2022-10-19 05:15:37,928 - root - INFO - n_initial_conditions 5
+2022-10-19 05:15:37,928 - root - INFO - ics_type default
+2022-10-19 05:15:37,928 - root - INFO - save_raw_forecasts True
+2022-10-19 05:15:37,928 - root - INFO - save_channel False
+2022-10-19 05:15:37,929 - root - INFO - masked_acc False
+2022-10-19 05:15:37,929 - root - INFO - maskpath None
+2022-10-19 05:15:37,929 - root - INFO - perturb False
+2022-10-19 05:15:37,929 - root - INFO - add_grid False
+2022-10-19 05:15:37,929 - root - INFO - N_grid_channels 0
+2022-10-19 05:15:37,929 - root - INFO - gridtype sinusoidal
+2022-10-19 05:15:37,929 - root - INFO - roll False
+2022-10-19 05:15:37,929 - root - INFO - num_blocks 8
+2022-10-19 05:15:37,929 - root - INFO - nettype afno
+2022-10-19 05:15:37,929 - root - INFO - patch_size 8
+2022-10-19 05:15:37,929 - root - INFO - width 56
+2022-10-19 05:15:37,929 - root - INFO - modes 32
+2022-10-19 05:15:37,929 - root - INFO - target default
+2022-10-19 05:15:37,930 - root - INFO - normalization zscore
+2022-10-19 05:15:37,930 - root - INFO - log_to_screen True
+2022-10-19 05:15:37,930 - root - INFO - save_checkpoint True
+2022-10-19 05:15:37,930 - root - INFO - enable_nhwc False
+2022-10-19 05:15:37,930 - root - INFO - optimizer_type FusedAdam
+2022-10-19 05:15:37,930 - root - INFO - crop_size_x None
+2022-10-19 05:15:37,930 - root - INFO - crop_size_y None
+2022-10-19 05:15:37,930 - root - INFO - plot_animations False
+2022-10-19 05:15:37,930 - root - INFO - add_noise False
+2022-10-19 05:15:37,930 - root - INFO - noise_std 0
+2022-10-19 05:15:37,930 - root - INFO - epsilon_factor 0
+2022-10-19 05:15:37,930 - root - INFO - world_size 1
+2022-10-19 05:15:37,931 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-19 05:15:37,931 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-19 05:15:37,931 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-19 05:15:37,931 - root - INFO - resuming False
+2022-10-19 05:15:37,931 - root - INFO - local_rank 0
+2022-10-19 05:15:37,931 - root - INFO - enable_amp True
+2022-10-19 05:15:37,931 - root - INFO - name afno_backbone_finetune_0
+2022-10-19 05:15:37,931 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-19 05:15:37,931 - root - INFO - project ERA5_precip
+2022-10-19 05:15:37,931 - root - INFO - entity flowgan
+2022-10-19 05:15:37,931 - root - INFO - ---------------------------------------------------
+2022-10-19 05:16:55,483 - root - INFO - rank 0, begin data loader init
+2022-10-19 05:16:55,487 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-19 05:16:55,488 - root - INFO - Number of samples per year: 1460
+2022-10-19 05:16:55,489 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-19 05:16:55,489 - root - INFO - Delta t: 6 hours
+2022-10-19 05:16:55,489 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 05:16:55,492 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-19 05:16:55,492 - root - INFO - Number of samples per year: 1460
+2022-10-19 05:16:55,493 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-19 05:16:55,493 - root - INFO - Delta t: 6 hours
+2022-10-19 05:16:55,493 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 05:16:55,493 - root - INFO - rank 0, data loader initialized
+2022-10-19 05:17:04,251 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 05:17:07,372 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-19 05:17:07,372 - root - INFO - Starting Training Loop...
+2022-10-19 05:18:31,677 - root - INFO - --------------- Versions ---------------
+2022-10-19 05:18:31,698 - root - INFO - git branch: b'* master'
+2022-10-19 05:18:31,712 - root - INFO - git hash: b'0038a68515aae33273b1cef88d5ddbec22d5e89b'
+2022-10-19 05:18:31,713 - root - INFO - Torch: 1.10.0
+2022-10-19 05:18:31,713 - root - INFO - ----------------------------------------
+2022-10-19 05:18:31,713 - root - INFO - ------------------ Configuration ------------------
+2022-10-19 05:18:31,713 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-19 05:18:31,713 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-19 05:18:31,713 - root - INFO - lr 0.0001
+2022-10-19 05:18:31,713 - root - INFO - batch_size 1
+2022-10-19 05:18:31,713 - root - INFO - log_to_wandb False
+2022-10-19 05:18:31,713 - root - INFO - max_epochs 50
+2022-10-19 05:18:31,713 - root - INFO - pretrained True
+2022-10-19 05:18:31,713 - root - INFO - two_step_training True
+2022-10-19 05:18:31,713 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 05:18:31,714 - root - INFO - scheduler CosineAnnealingLR
+2022-10-19 05:18:31,714 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 05:18:31,714 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-19 05:18:31,714 - root - INFO - orography False
+2022-10-19 05:18:31,714 - root - INFO - orography_path None
+2022-10-19 05:18:31,714 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-19 05:18:31,714 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-19 05:18:31,714 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-19 05:18:31,714 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-19 05:18:31,714 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-19 05:18:31,714 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-19 05:18:31,714 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-19 05:18:31,714 - root - INFO - loss l2
+2022-10-19 05:18:31,714 - root - INFO - num_data_workers 4
+2022-10-19 05:18:31,715 - root - INFO - dt 1
+2022-10-19 05:18:31,715 - root - INFO - n_history 0
+2022-10-19 05:18:31,715 - root - INFO - prediction_type iterative
+2022-10-19 05:18:31,715 - root - INFO - prediction_length 41
+2022-10-19 05:18:31,715 - root - INFO - n_initial_conditions 5
+2022-10-19 05:18:31,715 - root - INFO - ics_type default
+2022-10-19 05:18:31,715 - root - INFO - save_raw_forecasts True
+2022-10-19 05:18:31,715 - root - INFO - save_channel False
+2022-10-19 05:18:31,715 - root - INFO - masked_acc False
+2022-10-19 05:18:31,715 - root - INFO - maskpath None
+2022-10-19 05:18:31,715 - root - INFO - perturb False
+2022-10-19 05:18:31,715 - root - INFO - add_grid False
+2022-10-19 05:18:31,715 - root - INFO - N_grid_channels 0
+2022-10-19 05:18:31,715 - root - INFO - gridtype sinusoidal
+2022-10-19 05:18:31,716 - root - INFO - roll False
+2022-10-19 05:18:31,716 - root - INFO - num_blocks 8
+2022-10-19 05:18:31,716 - root - INFO - nettype afno
+2022-10-19 05:18:31,716 - root - INFO - patch_size 8
+2022-10-19 05:18:31,716 - root - INFO - width 56
+2022-10-19 05:18:31,716 - root - INFO - modes 32
+2022-10-19 05:18:31,716 - root - INFO - target default
+2022-10-19 05:18:31,716 - root - INFO - normalization zscore
+2022-10-19 05:18:31,716 - root - INFO - log_to_screen True
+2022-10-19 05:18:31,716 - root - INFO - save_checkpoint True
+2022-10-19 05:18:31,716 - root - INFO - enable_nhwc False
+2022-10-19 05:18:31,716 - root - INFO - optimizer_type FusedAdam
+2022-10-19 05:18:31,716 - root - INFO - crop_size_x None
+2022-10-19 05:18:31,716 - root - INFO - crop_size_y None
+2022-10-19 05:18:31,717 - root - INFO - plot_animations False
+2022-10-19 05:18:31,717 - root - INFO - add_noise False
+2022-10-19 05:18:31,717 - root - INFO - noise_std 0
+2022-10-19 05:18:31,717 - root - INFO - epsilon_factor 0
+2022-10-19 05:18:31,717 - root - INFO - world_size 1
+2022-10-19 05:18:31,717 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-19 05:18:31,717 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-19 05:18:31,717 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-19 05:18:31,717 - root - INFO - resuming False
+2022-10-19 05:18:31,717 - root - INFO - local_rank 0
+2022-10-19 05:18:31,717 - root - INFO - enable_amp True
+2022-10-19 05:18:31,717 - root - INFO - name afno_backbone_finetune_0
+2022-10-19 05:18:31,717 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-19 05:18:31,717 - root - INFO - project ERA5_precip
+2022-10-19 05:18:31,718 - root - INFO - entity flowgan
+2022-10-19 05:18:31,718 - root - INFO - ---------------------------------------------------
+2022-10-19 05:18:31,728 - root - INFO - rank 0, begin data loader init
+2022-10-19 05:18:31,729 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-19 05:18:31,730 - root - INFO - Number of samples per year: 1460
+2022-10-19 05:18:31,730 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-19 05:18:31,730 - root - INFO - Delta t: 6 hours
+2022-10-19 05:18:31,730 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 05:18:31,731 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-19 05:18:31,732 - root - INFO - Number of samples per year: 1460
+2022-10-19 05:18:31,732 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-19 05:18:31,732 - root - INFO - Delta t: 6 hours
+2022-10-19 05:18:31,733 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-19 05:18:31,733 - root - INFO - rank 0, data loader initialized
+2022-10-19 05:18:36,037 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-19 05:18:36,538 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-19 05:18:36,539 - root - INFO - Starting Training Loop...
+2022-10-20 01:54:24,194 - root - INFO - --------------- Versions ---------------
+2022-10-20 01:54:24,214 - root - INFO - git branch: b'* master'
+2022-10-20 01:54:24,228 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 01:54:24,228 - root - INFO - Torch: 1.10.0
+2022-10-20 01:54:24,228 - root - INFO - ----------------------------------------
+2022-10-20 01:54:24,228 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 01:54:24,228 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 01:54:24,228 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 01:54:24,228 - root - INFO - lr 0.0001
+2022-10-20 01:54:24,228 - root - INFO - batch_size 1
+2022-10-20 01:54:24,228 - root - INFO - log_to_wandb False
+2022-10-20 01:54:24,229 - root - INFO - max_epochs 50
+2022-10-20 01:54:24,229 - root - INFO - pretrained True
+2022-10-20 01:54:24,229 - root - INFO - two_step_training True
+2022-10-20 01:54:24,229 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 01:54:24,229 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 01:54:24,229 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 01:54:24,229 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 01:54:24,229 - root - INFO - orography False
+2022-10-20 01:54:24,229 - root - INFO - orography_path None
+2022-10-20 01:54:24,229 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 01:54:24,229 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 01:54:24,229 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 01:54:24,229 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 01:54:24,229 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 01:54:24,229 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 01:54:24,229 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 01:54:24,229 - root - INFO - loss l2
+2022-10-20 01:54:24,229 - root - INFO - num_data_workers 4
+2022-10-20 01:54:24,229 - root - INFO - dt 1
+2022-10-20 01:54:24,229 - root - INFO - n_history 0
+2022-10-20 01:54:24,229 - root - INFO - prediction_type iterative
+2022-10-20 01:54:24,229 - root - INFO - prediction_length 41
+2022-10-20 01:54:24,229 - root - INFO - n_initial_conditions 5
+2022-10-20 01:54:24,229 - root - INFO - ics_type default
+2022-10-20 01:54:24,229 - root - INFO - save_raw_forecasts True
+2022-10-20 01:54:24,229 - root - INFO - save_channel False
+2022-10-20 01:54:24,229 - root - INFO - masked_acc False
+2022-10-20 01:54:24,229 - root - INFO - maskpath None
+2022-10-20 01:54:24,229 - root - INFO - perturb False
+2022-10-20 01:54:24,229 - root - INFO - add_grid False
+2022-10-20 01:54:24,229 - root - INFO - N_grid_channels 0
+2022-10-20 01:54:24,229 - root - INFO - gridtype sinusoidal
+2022-10-20 01:54:24,230 - root - INFO - roll False
+2022-10-20 01:54:24,230 - root - INFO - num_blocks 8
+2022-10-20 01:54:24,230 - root - INFO - nettype afno
+2022-10-20 01:54:24,230 - root - INFO - patch_size 8
+2022-10-20 01:54:24,230 - root - INFO - width 56
+2022-10-20 01:54:24,230 - root - INFO - modes 32
+2022-10-20 01:54:24,230 - root - INFO - target default
+2022-10-20 01:54:24,230 - root - INFO - normalization zscore
+2022-10-20 01:54:24,230 - root - INFO - log_to_screen True
+2022-10-20 01:54:24,230 - root - INFO - save_checkpoint True
+2022-10-20 01:54:24,230 - root - INFO - enable_nhwc False
+2022-10-20 01:54:24,230 - root - INFO - optimizer_type FusedAdam
+2022-10-20 01:54:24,230 - root - INFO - crop_size_x None
+2022-10-20 01:54:24,230 - root - INFO - crop_size_y None
+2022-10-20 01:54:24,230 - root - INFO - plot_animations False
+2022-10-20 01:54:24,230 - root - INFO - add_noise False
+2022-10-20 01:54:24,230 - root - INFO - noise_std 0
+2022-10-20 01:54:24,230 - root - INFO - epsilon_factor 0
+2022-10-20 01:54:24,230 - root - INFO - world_size 1
+2022-10-20 01:54:24,230 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 01:54:24,230 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 01:54:24,230 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 01:54:24,230 - root - INFO - resuming False
+2022-10-20 01:54:24,230 - root - INFO - local_rank 0
+2022-10-20 01:54:24,230 - root - INFO - enable_amp True
+2022-10-20 01:54:24,230 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 01:54:24,230 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 01:54:24,230 - root - INFO - project ERA5_precip
+2022-10-20 01:54:24,230 - root - INFO - entity flowgan
+2022-10-20 01:54:24,230 - root - INFO - ---------------------------------------------------
+2022-10-20 01:54:24,238 - root - INFO - rank 0, begin data loader init
+2022-10-20 01:54:24,366 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 01:54:24,367 - root - INFO - Number of samples per year: 1460
+2022-10-20 01:54:24,367 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 01:54:24,367 - root - INFO - Delta t: 6 hours
+2022-10-20 01:54:24,367 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 01:54:24,567 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 01:54:24,568 - root - INFO - Number of samples per year: 1460
+2022-10-20 01:54:24,568 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 01:54:24,568 - root - INFO - Delta t: 6 hours
+2022-10-20 01:54:24,568 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 01:54:24,568 - root - INFO - rank 0, data loader initialized
+2022-10-20 01:57:38,684 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:01:36,119 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 02:01:36,119 - root - INFO - Starting Training Loop...
+2022-10-20 02:26:26,924 - root - INFO - --------------- Versions ---------------
+2022-10-20 02:26:26,945 - root - INFO - git branch: b'* master'
+2022-10-20 02:26:26,959 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 02:26:26,959 - root - INFO - Torch: 1.10.0
+2022-10-20 02:26:26,959 - root - INFO - ----------------------------------------
+2022-10-20 02:26:26,959 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 02:26:26,959 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 02:26:26,959 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 02:26:26,959 - root - INFO - lr 0.0001
+2022-10-20 02:26:26,959 - root - INFO - batch_size 64
+2022-10-20 02:26:26,960 - root - INFO - log_to_wandb False
+2022-10-20 02:26:26,960 - root - INFO - max_epochs 50
+2022-10-20 02:26:26,960 - root - INFO - pretrained True
+2022-10-20 02:26:26,960 - root - INFO - two_step_training True
+2022-10-20 02:26:26,960 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:26:26,960 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 02:26:26,960 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:26:26,960 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:26:26,960 - root - INFO - orography False
+2022-10-20 02:26:26,960 - root - INFO - orography_path None
+2022-10-20 02:26:26,960 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 02:26:26,960 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 02:26:26,960 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 02:26:26,960 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 02:26:26,960 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 02:26:26,960 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 02:26:26,960 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 02:26:26,960 - root - INFO - loss l2
+2022-10-20 02:26:26,960 - root - INFO - num_data_workers 4
+2022-10-20 02:26:26,960 - root - INFO - dt 1
+2022-10-20 02:26:26,960 - root - INFO - n_history 0
+2022-10-20 02:26:26,960 - root - INFO - prediction_type iterative
+2022-10-20 02:26:26,960 - root - INFO - prediction_length 41
+2022-10-20 02:26:26,960 - root - INFO - n_initial_conditions 5
+2022-10-20 02:26:26,960 - root - INFO - ics_type default
+2022-10-20 02:26:26,960 - root - INFO - save_raw_forecasts True
+2022-10-20 02:26:26,960 - root - INFO - save_channel False
+2022-10-20 02:26:26,960 - root - INFO - masked_acc False
+2022-10-20 02:26:26,960 - root - INFO - maskpath None
+2022-10-20 02:26:26,960 - root - INFO - perturb False
+2022-10-20 02:26:26,960 - root - INFO - add_grid False
+2022-10-20 02:26:26,961 - root - INFO - N_grid_channels 0
+2022-10-20 02:26:26,961 - root - INFO - gridtype sinusoidal
+2022-10-20 02:26:26,961 - root - INFO - roll False
+2022-10-20 02:26:26,961 - root - INFO - num_blocks 8
+2022-10-20 02:26:26,961 - root - INFO - nettype afno
+2022-10-20 02:26:26,961 - root - INFO - patch_size 8
+2022-10-20 02:26:26,961 - root - INFO - width 56
+2022-10-20 02:26:26,961 - root - INFO - modes 32
+2022-10-20 02:26:26,961 - root - INFO - target default
+2022-10-20 02:26:26,961 - root - INFO - normalization zscore
+2022-10-20 02:26:26,961 - root - INFO - log_to_screen True
+2022-10-20 02:26:26,961 - root - INFO - save_checkpoint True
+2022-10-20 02:26:26,961 - root - INFO - enable_nhwc False
+2022-10-20 02:26:26,961 - root - INFO - optimizer_type FusedAdam
+2022-10-20 02:26:26,961 - root - INFO - crop_size_x None
+2022-10-20 02:26:26,961 - root - INFO - crop_size_y None
+2022-10-20 02:26:26,961 - root - INFO - plot_animations False
+2022-10-20 02:26:26,961 - root - INFO - add_noise False
+2022-10-20 02:26:26,961 - root - INFO - noise_std 0
+2022-10-20 02:26:26,961 - root - INFO - epsilon_factor 0
+2022-10-20 02:26:26,961 - root - INFO - world_size 1
+2022-10-20 02:26:26,961 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 02:26:26,961 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 02:26:26,961 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 02:26:26,961 - root - INFO - resuming False
+2022-10-20 02:26:26,961 - root - INFO - local_rank 0
+2022-10-20 02:26:26,961 - root - INFO - enable_amp True
+2022-10-20 02:26:26,961 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 02:26:26,961 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 02:26:26,961 - root - INFO - project ERA5_precip
+2022-10-20 02:26:26,961 - root - INFO - entity flowgan
+2022-10-20 02:26:26,962 - root - INFO - ---------------------------------------------------
+2022-10-20 02:26:26,968 - root - INFO - rank 0, begin data loader init
+2022-10-20 02:26:26,970 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 02:26:26,971 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:26:26,971 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 02:26:26,971 - root - INFO - Delta t: 6 hours
+2022-10-20 02:26:26,971 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:26:26,971 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 02:26:26,972 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:26:26,972 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 02:26:26,972 - root - INFO - Delta t: 6 hours
+2022-10-20 02:26:26,972 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:26:26,972 - root - INFO - rank 0, data loader initialized
+2022-10-20 02:26:31,089 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:26:31,607 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 02:26:31,607 - root - INFO - Starting Training Loop...
+2022-10-20 02:28:06,442 - root - INFO - --------------- Versions ---------------
+2022-10-20 02:28:06,463 - root - INFO - git branch: b'* master'
+2022-10-20 02:28:06,477 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 02:28:06,477 - root - INFO - Torch: 1.10.0
+2022-10-20 02:28:06,477 - root - INFO - ----------------------------------------
+2022-10-20 02:28:06,477 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 02:28:06,477 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 02:28:06,477 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 02:28:06,477 - root - INFO - lr 0.0001
+2022-10-20 02:28:06,477 - root - INFO - batch_size 16
+2022-10-20 02:28:06,477 - root - INFO - log_to_wandb False
+2022-10-20 02:28:06,477 - root - INFO - max_epochs 50
+2022-10-20 02:28:06,477 - root - INFO - pretrained True
+2022-10-20 02:28:06,477 - root - INFO - two_step_training True
+2022-10-20 02:28:06,477 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:28:06,477 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 02:28:06,477 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:28:06,477 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:28:06,477 - root - INFO - orography False
+2022-10-20 02:28:06,477 - root - INFO - orography_path None
+2022-10-20 02:28:06,477 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 02:28:06,478 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 02:28:06,478 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 02:28:06,478 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 02:28:06,478 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 02:28:06,478 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 02:28:06,478 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 02:28:06,478 - root - INFO - loss l2
+2022-10-20 02:28:06,478 - root - INFO - num_data_workers 4
+2022-10-20 02:28:06,478 - root - INFO - dt 1
+2022-10-20 02:28:06,478 - root - INFO - n_history 0
+2022-10-20 02:28:06,478 - root - INFO - prediction_type iterative
+2022-10-20 02:28:06,478 - root - INFO - prediction_length 41
+2022-10-20 02:28:06,478 - root - INFO - n_initial_conditions 5
+2022-10-20 02:28:06,478 - root - INFO - ics_type default
+2022-10-20 02:28:06,478 - root - INFO - save_raw_forecasts True
+2022-10-20 02:28:06,478 - root - INFO - save_channel False
+2022-10-20 02:28:06,478 - root - INFO - masked_acc False
+2022-10-20 02:28:06,478 - root - INFO - maskpath None
+2022-10-20 02:28:06,478 - root - INFO - perturb False
+2022-10-20 02:28:06,478 - root - INFO - add_grid False
+2022-10-20 02:28:06,478 - root - INFO - N_grid_channels 0
+2022-10-20 02:28:06,478 - root - INFO - gridtype sinusoidal
+2022-10-20 02:28:06,478 - root - INFO - roll False
+2022-10-20 02:28:06,478 - root - INFO - num_blocks 8
+2022-10-20 02:28:06,478 - root - INFO - nettype afno
+2022-10-20 02:28:06,478 - root - INFO - patch_size 8
+2022-10-20 02:28:06,478 - root - INFO - width 56
+2022-10-20 02:28:06,478 - root - INFO - modes 32
+2022-10-20 02:28:06,478 - root - INFO - target default
+2022-10-20 02:28:06,478 - root - INFO - normalization zscore
+2022-10-20 02:28:06,478 - root - INFO - log_to_screen True
+2022-10-20 02:28:06,478 - root - INFO - save_checkpoint True
+2022-10-20 02:28:06,478 - root - INFO - enable_nhwc False
+2022-10-20 02:28:06,478 - root - INFO - optimizer_type FusedAdam
+2022-10-20 02:28:06,479 - root - INFO - crop_size_x None
+2022-10-20 02:28:06,479 - root - INFO - crop_size_y None
+2022-10-20 02:28:06,479 - root - INFO - plot_animations False
+2022-10-20 02:28:06,479 - root - INFO - add_noise False
+2022-10-20 02:28:06,479 - root - INFO - noise_std 0
+2022-10-20 02:28:06,479 - root - INFO - epsilon_factor 0
+2022-10-20 02:28:06,479 - root - INFO - world_size 1
+2022-10-20 02:28:06,479 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 02:28:06,479 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 02:28:06,479 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 02:28:06,479 - root - INFO - resuming False
+2022-10-20 02:28:06,479 - root - INFO - local_rank 0
+2022-10-20 02:28:06,479 - root - INFO - enable_amp True
+2022-10-20 02:28:06,479 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 02:28:06,479 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 02:28:06,479 - root - INFO - project ERA5_precip
+2022-10-20 02:28:06,479 - root - INFO - entity flowgan
+2022-10-20 02:28:06,479 - root - INFO - ---------------------------------------------------
+2022-10-20 02:28:06,486 - root - INFO - rank 0, begin data loader init
+2022-10-20 02:28:06,487 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 02:28:06,488 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:28:06,488 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 02:28:06,488 - root - INFO - Delta t: 6 hours
+2022-10-20 02:28:06,488 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:28:06,489 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 02:28:06,490 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:28:06,490 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 02:28:06,490 - root - INFO - Delta t: 6 hours
+2022-10-20 02:28:06,490 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:28:06,490 - root - INFO - rank 0, data loader initialized
+2022-10-20 02:28:10,664 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:28:11,170 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 02:28:11,170 - root - INFO - Starting Training Loop...
+2022-10-20 02:28:56,038 - root - INFO - --------------- Versions ---------------
+2022-10-20 02:28:56,059 - root - INFO - git branch: b'* master'
+2022-10-20 02:28:56,073 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 02:28:56,074 - root - INFO - Torch: 1.10.0
+2022-10-20 02:28:56,074 - root - INFO - ----------------------------------------
+2022-10-20 02:28:56,074 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 02:28:56,074 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 02:28:56,074 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 02:28:56,074 - root - INFO - lr 0.0001
+2022-10-20 02:28:56,074 - root - INFO - batch_size 8
+2022-10-20 02:28:56,074 - root - INFO - log_to_wandb False
+2022-10-20 02:28:56,074 - root - INFO - max_epochs 50
+2022-10-20 02:28:56,074 - root - INFO - pretrained True
+2022-10-20 02:28:56,074 - root - INFO - two_step_training True
+2022-10-20 02:28:56,074 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:28:56,074 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 02:28:56,074 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:28:56,074 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:28:56,074 - root - INFO - orography False
+2022-10-20 02:28:56,074 - root - INFO - orography_path None
+2022-10-20 02:28:56,074 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 02:28:56,074 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 02:28:56,074 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 02:28:56,074 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 02:28:56,074 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 02:28:56,074 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 02:28:56,074 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 02:28:56,074 - root - INFO - loss l2
+2022-10-20 02:28:56,074 - root - INFO - num_data_workers 4
+2022-10-20 02:28:56,074 - root - INFO - dt 1
+2022-10-20 02:28:56,074 - root - INFO - n_history 0
+2022-10-20 02:28:56,074 - root - INFO - prediction_type iterative
+2022-10-20 02:28:56,075 - root - INFO - prediction_length 41
+2022-10-20 02:28:56,075 - root - INFO - n_initial_conditions 5
+2022-10-20 02:28:56,075 - root - INFO - ics_type default
+2022-10-20 02:28:56,075 - root - INFO - save_raw_forecasts True
+2022-10-20 02:28:56,075 - root - INFO - save_channel False
+2022-10-20 02:28:56,075 - root - INFO - masked_acc False
+2022-10-20 02:28:56,075 - root - INFO - maskpath None
+2022-10-20 02:28:56,075 - root - INFO - perturb False
+2022-10-20 02:28:56,075 - root - INFO - add_grid False
+2022-10-20 02:28:56,075 - root - INFO - N_grid_channels 0
+2022-10-20 02:28:56,075 - root - INFO - gridtype sinusoidal
+2022-10-20 02:28:56,075 - root - INFO - roll False
+2022-10-20 02:28:56,075 - root - INFO - num_blocks 8
+2022-10-20 02:28:56,075 - root - INFO - nettype afno
+2022-10-20 02:28:56,075 - root - INFO - patch_size 8
+2022-10-20 02:28:56,075 - root - INFO - width 56
+2022-10-20 02:28:56,075 - root - INFO - modes 32
+2022-10-20 02:28:56,075 - root - INFO - target default
+2022-10-20 02:28:56,075 - root - INFO - normalization zscore
+2022-10-20 02:28:56,075 - root - INFO - log_to_screen True
+2022-10-20 02:28:56,075 - root - INFO - save_checkpoint True
+2022-10-20 02:28:56,075 - root - INFO - enable_nhwc False
+2022-10-20 02:28:56,075 - root - INFO - optimizer_type FusedAdam
+2022-10-20 02:28:56,075 - root - INFO - crop_size_x None
+2022-10-20 02:28:56,075 - root - INFO - crop_size_y None
+2022-10-20 02:28:56,075 - root - INFO - plot_animations False
+2022-10-20 02:28:56,075 - root - INFO - add_noise False
+2022-10-20 02:28:56,075 - root - INFO - noise_std 0
+2022-10-20 02:28:56,075 - root - INFO - epsilon_factor 0
+2022-10-20 02:28:56,075 - root - INFO - world_size 1
+2022-10-20 02:28:56,075 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 02:28:56,075 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 02:28:56,075 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 02:28:56,075 - root - INFO - resuming False
+2022-10-20 02:28:56,076 - root - INFO - local_rank 0
+2022-10-20 02:28:56,076 - root - INFO - enable_amp True
+2022-10-20 02:28:56,076 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 02:28:56,076 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 02:28:56,076 - root - INFO - project ERA5_precip
+2022-10-20 02:28:56,076 - root - INFO - entity flowgan
+2022-10-20 02:28:56,076 - root - INFO - ---------------------------------------------------
+2022-10-20 02:28:56,083 - root - INFO - rank 0, begin data loader init
+2022-10-20 02:28:56,084 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 02:28:56,085 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:28:56,085 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 02:28:56,085 - root - INFO - Delta t: 6 hours
+2022-10-20 02:28:56,085 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:28:56,086 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 02:28:56,086 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:28:56,086 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 02:28:56,086 - root - INFO - Delta t: 6 hours
+2022-10-20 02:28:56,086 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:28:56,087 - root - INFO - rank 0, data loader initialized
+2022-10-20 02:29:00,507 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:29:01,007 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 02:29:01,008 - root - INFO - Starting Training Loop...
+2022-10-20 02:29:52,205 - root - INFO - --------------- Versions ---------------
+2022-10-20 02:29:52,226 - root - INFO - git branch: b'* master'
+2022-10-20 02:29:52,241 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 02:29:52,241 - root - INFO - Torch: 1.10.0
+2022-10-20 02:29:52,241 - root - INFO - ----------------------------------------
+2022-10-20 02:29:52,241 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 02:29:52,242 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 02:29:52,242 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 02:29:52,242 - root - INFO - lr 0.0001
+2022-10-20 02:29:52,242 - root - INFO - batch_size 4
+2022-10-20 02:29:52,242 - root - INFO - log_to_wandb False
+2022-10-20 02:29:52,242 - root - INFO - max_epochs 50
+2022-10-20 02:29:52,242 - root - INFO - pretrained True
+2022-10-20 02:29:52,242 - root - INFO - two_step_training True
+2022-10-20 02:29:52,242 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:29:52,242 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 02:29:52,242 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:29:52,242 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:29:52,242 - root - INFO - orography False
+2022-10-20 02:29:52,242 - root - INFO - orography_path None
+2022-10-20 02:29:52,242 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 02:29:52,242 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 02:29:52,242 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 02:29:52,242 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 02:29:52,242 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 02:29:52,242 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 02:29:52,242 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 02:29:52,242 - root - INFO - loss l2
+2022-10-20 02:29:52,242 - root - INFO - num_data_workers 4
+2022-10-20 02:29:52,242 - root - INFO - dt 1
+2022-10-20 02:29:52,242 - root - INFO - n_history 0
+2022-10-20 02:29:52,242 - root - INFO - prediction_type iterative
+2022-10-20 02:29:52,242 - root - INFO - prediction_length 41
+2022-10-20 02:29:52,242 - root - INFO - n_initial_conditions 5
+2022-10-20 02:29:52,242 - root - INFO - ics_type default
+2022-10-20 02:29:52,242 - root - INFO - save_raw_forecasts True
+2022-10-20 02:29:52,242 - root - INFO - save_channel False
+2022-10-20 02:29:52,243 - root - INFO - masked_acc False
+2022-10-20 02:29:52,243 - root - INFO - maskpath None
+2022-10-20 02:29:52,243 - root - INFO - perturb False
+2022-10-20 02:29:52,243 - root - INFO - add_grid False
+2022-10-20 02:29:52,243 - root - INFO - N_grid_channels 0
+2022-10-20 02:29:52,243 - root - INFO - gridtype sinusoidal
+2022-10-20 02:29:52,243 - root - INFO - roll False
+2022-10-20 02:29:52,243 - root - INFO - num_blocks 8
+2022-10-20 02:29:52,243 - root - INFO - nettype afno
+2022-10-20 02:29:52,243 - root - INFO - patch_size 8
+2022-10-20 02:29:52,243 - root - INFO - width 56
+2022-10-20 02:29:52,243 - root - INFO - modes 32
+2022-10-20 02:29:52,243 - root - INFO - target default
+2022-10-20 02:29:52,243 - root - INFO - normalization zscore
+2022-10-20 02:29:52,243 - root - INFO - log_to_screen True
+2022-10-20 02:29:52,243 - root - INFO - save_checkpoint True
+2022-10-20 02:29:52,243 - root - INFO - enable_nhwc False
+2022-10-20 02:29:52,243 - root - INFO - optimizer_type FusedAdam
+2022-10-20 02:29:52,243 - root - INFO - crop_size_x None
+2022-10-20 02:29:52,243 - root - INFO - crop_size_y None
+2022-10-20 02:29:52,243 - root - INFO - plot_animations False
+2022-10-20 02:29:52,243 - root - INFO - add_noise False
+2022-10-20 02:29:52,243 - root - INFO - noise_std 0
+2022-10-20 02:29:52,243 - root - INFO - epsilon_factor 0
+2022-10-20 02:29:52,243 - root - INFO - world_size 1
+2022-10-20 02:29:52,243 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 02:29:52,243 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 02:29:52,243 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 02:29:52,243 - root - INFO - resuming False
+2022-10-20 02:29:52,243 - root - INFO - local_rank 0
+2022-10-20 02:29:52,243 - root - INFO - enable_amp True
+2022-10-20 02:29:52,243 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 02:29:52,243 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 02:29:52,243 - root - INFO - project ERA5_precip
+2022-10-20 02:29:52,244 - root - INFO - entity flowgan
+2022-10-20 02:29:52,244 - root - INFO - ---------------------------------------------------
+2022-10-20 02:29:52,251 - root - INFO - rank 0, begin data loader init
+2022-10-20 02:29:52,252 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 02:29:52,253 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:29:52,253 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 02:29:52,253 - root - INFO - Delta t: 6 hours
+2022-10-20 02:29:52,253 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:29:52,254 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 02:29:52,254 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:29:52,254 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 02:29:52,254 - root - INFO - Delta t: 6 hours
+2022-10-20 02:29:52,255 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:29:52,255 - root - INFO - rank 0, data loader initialized
+2022-10-20 02:29:56,763 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:29:57,190 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 02:29:57,190 - root - INFO - Starting Training Loop...
+2022-10-20 02:30:25,930 - root - INFO - --------------- Versions ---------------
+2022-10-20 02:30:25,951 - root - INFO - git branch: b'* master'
+2022-10-20 02:30:25,966 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 02:30:25,966 - root - INFO - Torch: 1.10.0
+2022-10-20 02:30:25,966 - root - INFO - ----------------------------------------
+2022-10-20 02:30:25,966 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 02:30:25,966 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 02:30:25,966 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 02:30:25,966 - root - INFO - lr 0.0001
+2022-10-20 02:30:25,966 - root - INFO - batch_size 2
+2022-10-20 02:30:25,966 - root - INFO - log_to_wandb False
+2022-10-20 02:30:25,966 - root - INFO - max_epochs 50
+2022-10-20 02:30:25,966 - root - INFO - pretrained True
+2022-10-20 02:30:25,966 - root - INFO - two_step_training True
+2022-10-20 02:30:25,966 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:30:25,966 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 02:30:25,966 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:30:25,967 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:30:25,967 - root - INFO - orography False
+2022-10-20 02:30:25,967 - root - INFO - orography_path None
+2022-10-20 02:30:25,967 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 02:30:25,967 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 02:30:25,967 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 02:30:25,967 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 02:30:25,967 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 02:30:25,967 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 02:30:25,967 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 02:30:25,967 - root - INFO - loss l2
+2022-10-20 02:30:25,967 - root - INFO - num_data_workers 4
+2022-10-20 02:30:25,967 - root - INFO - dt 1
+2022-10-20 02:30:25,967 - root - INFO - n_history 0
+2022-10-20 02:30:25,967 - root - INFO - prediction_type iterative
+2022-10-20 02:30:25,967 - root - INFO - prediction_length 41
+2022-10-20 02:30:25,967 - root - INFO - n_initial_conditions 5
+2022-10-20 02:30:25,967 - root - INFO - ics_type default
+2022-10-20 02:30:25,967 - root - INFO - save_raw_forecasts True
+2022-10-20 02:30:25,967 - root - INFO - save_channel False
+2022-10-20 02:30:25,967 - root - INFO - masked_acc False
+2022-10-20 02:30:25,967 - root - INFO - maskpath None
+2022-10-20 02:30:25,967 - root - INFO - perturb False
+2022-10-20 02:30:25,967 - root - INFO - add_grid False
+2022-10-20 02:30:25,967 - root - INFO - N_grid_channels 0
+2022-10-20 02:30:25,967 - root - INFO - gridtype sinusoidal
+2022-10-20 02:30:25,967 - root - INFO - roll False
+2022-10-20 02:30:25,967 - root - INFO - num_blocks 8
+2022-10-20 02:30:25,967 - root - INFO - nettype afno
+2022-10-20 02:30:25,967 - root - INFO - patch_size 8
+2022-10-20 02:30:25,967 - root - INFO - width 56
+2022-10-20 02:30:25,967 - root - INFO - modes 32
+2022-10-20 02:30:25,967 - root - INFO - target default
+2022-10-20 02:30:25,967 - root - INFO - normalization zscore
+2022-10-20 02:30:25,968 - root - INFO - log_to_screen True
+2022-10-20 02:30:25,968 - root - INFO - save_checkpoint True
+2022-10-20 02:30:25,968 - root - INFO - enable_nhwc False
+2022-10-20 02:30:25,968 - root - INFO - optimizer_type FusedAdam
+2022-10-20 02:30:25,968 - root - INFO - crop_size_x None
+2022-10-20 02:30:25,968 - root - INFO - crop_size_y None
+2022-10-20 02:30:25,968 - root - INFO - plot_animations False
+2022-10-20 02:30:25,968 - root - INFO - add_noise False
+2022-10-20 02:30:25,968 - root - INFO - noise_std 0
+2022-10-20 02:30:25,968 - root - INFO - epsilon_factor 0
+2022-10-20 02:30:25,968 - root - INFO - world_size 1
+2022-10-20 02:30:25,968 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 02:30:25,968 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 02:30:25,968 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 02:30:25,968 - root - INFO - resuming False
+2022-10-20 02:30:25,968 - root - INFO - local_rank 0
+2022-10-20 02:30:25,968 - root - INFO - enable_amp True
+2022-10-20 02:30:25,968 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 02:30:25,968 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 02:30:25,968 - root - INFO - project ERA5_precip
+2022-10-20 02:30:25,968 - root - INFO - entity flowgan
+2022-10-20 02:30:25,968 - root - INFO - ---------------------------------------------------
+2022-10-20 02:30:25,976 - root - INFO - rank 0, begin data loader init
+2022-10-20 02:30:25,977 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 02:30:25,978 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:30:25,978 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 02:30:25,978 - root - INFO - Delta t: 6 hours
+2022-10-20 02:30:25,978 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:30:25,979 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 02:30:25,979 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:30:25,979 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 02:30:25,979 - root - INFO - Delta t: 6 hours
+2022-10-20 02:30:25,979 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:30:25,979 - root - INFO - rank 0, data loader initialized
+2022-10-20 02:30:30,163 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:30:30,665 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 02:30:30,665 - root - INFO - Starting Training Loop...
+2022-10-20 02:51:48,132 - root - INFO - --------------- Versions ---------------
+2022-10-20 02:51:48,147 - root - INFO - git branch: b'* master'
+2022-10-20 02:51:48,161 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 02:51:48,162 - root - INFO - Torch: 1.10.0
+2022-10-20 02:51:48,162 - root - INFO - ----------------------------------------
+2022-10-20 02:51:48,162 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 02:51:48,162 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 02:51:48,162 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 02:51:48,162 - root - INFO - lr 0.0001
+2022-10-20 02:51:48,162 - root - INFO - batch_size 2
+2022-10-20 02:51:48,162 - root - INFO - log_to_wandb False
+2022-10-20 02:51:48,162 - root - INFO - max_epochs 50
+2022-10-20 02:51:48,162 - root - INFO - pretrained True
+2022-10-20 02:51:48,162 - root - INFO - two_step_training True
+2022-10-20 02:51:48,162 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:51:48,162 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 02:51:48,162 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:51:48,162 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 02:51:48,162 - root - INFO - orography False
+2022-10-20 02:51:48,162 - root - INFO - orography_path None
+2022-10-20 02:51:48,162 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 02:51:48,162 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 02:51:48,162 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 02:51:48,162 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 02:51:48,162 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 02:51:48,162 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 02:51:48,162 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 02:51:48,162 - root - INFO - loss l2
+2022-10-20 02:51:48,162 - root - INFO - num_data_workers 4
+2022-10-20 02:51:48,163 - root - INFO - dt 1
+2022-10-20 02:51:48,163 - root - INFO - n_history 0
+2022-10-20 02:51:48,163 - root - INFO - prediction_type iterative
+2022-10-20 02:51:48,163 - root - INFO - prediction_length 41
+2022-10-20 02:51:48,163 - root - INFO - n_initial_conditions 5
+2022-10-20 02:51:48,163 - root - INFO - ics_type default
+2022-10-20 02:51:48,163 - root - INFO - save_raw_forecasts True
+2022-10-20 02:51:48,163 - root - INFO - save_channel False
+2022-10-20 02:51:48,163 - root - INFO - masked_acc False
+2022-10-20 02:51:48,163 - root - INFO - maskpath None
+2022-10-20 02:51:48,163 - root - INFO - perturb False
+2022-10-20 02:51:48,163 - root - INFO - add_grid False
+2022-10-20 02:51:48,163 - root - INFO - N_grid_channels 0
+2022-10-20 02:51:48,163 - root - INFO - gridtype sinusoidal
+2022-10-20 02:51:48,163 - root - INFO - roll False
+2022-10-20 02:51:48,163 - root - INFO - num_blocks 8
+2022-10-20 02:51:48,163 - root - INFO - nettype afno
+2022-10-20 02:51:48,163 - root - INFO - patch_size 8
+2022-10-20 02:51:48,163 - root - INFO - width 56
+2022-10-20 02:51:48,163 - root - INFO - modes 32
+2022-10-20 02:51:48,163 - root - INFO - target default
+2022-10-20 02:51:48,163 - root - INFO - normalization zscore
+2022-10-20 02:51:48,163 - root - INFO - log_to_screen True
+2022-10-20 02:51:48,163 - root - INFO - save_checkpoint True
+2022-10-20 02:51:48,163 - root - INFO - enable_nhwc False
+2022-10-20 02:51:48,163 - root - INFO - optimizer_type FusedAdam
+2022-10-20 02:51:48,163 - root - INFO - crop_size_x None
+2022-10-20 02:51:48,163 - root - INFO - crop_size_y None
+2022-10-20 02:51:48,163 - root - INFO - plot_animations False
+2022-10-20 02:51:48,163 - root - INFO - add_noise False
+2022-10-20 02:51:48,163 - root - INFO - noise_std 0
+2022-10-20 02:51:48,163 - root - INFO - epsilon_factor 0
+2022-10-20 02:51:48,164 - root - INFO - world_size 8
+2022-10-20 02:51:48,164 - root - INFO - global_batch_size 16
+2022-10-20 02:51:48,164 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 02:51:48,164 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 02:51:48,164 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 02:51:48,164 - root - INFO - resuming False
+2022-10-20 02:51:48,164 - root - INFO - local_rank 0
+2022-10-20 02:51:48,164 - root - INFO - enable_amp True
+2022-10-20 02:51:48,164 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 02:51:48,164 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 02:51:48,164 - root - INFO - project ERA5_precip
+2022-10-20 02:51:48,164 - root - INFO - entity flowgan
+2022-10-20 02:51:48,164 - root - INFO - ---------------------------------------------------
+2022-10-20 02:51:48,172 - root - INFO - rank 0, begin data loader init
+2022-10-20 02:51:48,173 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 02:51:48,174 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:51:48,174 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 02:51:48,174 - root - INFO - Delta t: 6 hours
+2022-10-20 02:51:48,174 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:51:48,175 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 02:51:48,176 - root - INFO - Number of samples per year: 1460
+2022-10-20 02:51:48,176 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 02:51:48,176 - root - INFO - Delta t: 6 hours
+2022-10-20 02:51:48,176 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 02:51:48,176 - root - INFO - rank 0, data loader initialized
+2022-10-20 02:51:53,859 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 02:51:54,325 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 02:51:54,325 - root - INFO - Starting Training Loop...
+2022-10-20 03:03:55,836 - root - INFO - --------------- Versions ---------------
+2022-10-20 03:03:55,851 - root - INFO - git branch: b'* master'
+2022-10-20 03:03:55,864 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 03:03:55,864 - root - INFO - Torch: 1.10.0
+2022-10-20 03:03:55,864 - root - INFO - ----------------------------------------
+2022-10-20 03:03:55,864 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 03:03:55,864 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 03:03:55,864 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 03:03:55,864 - root - INFO - lr 0.0001
+2022-10-20 03:03:55,865 - root - INFO - batch_size 2
+2022-10-20 03:03:55,865 - root - INFO - log_to_wandb False
+2022-10-20 03:03:55,865 - root - INFO - max_epochs 50
+2022-10-20 03:03:55,865 - root - INFO - pretrained True
+2022-10-20 03:03:55,865 - root - INFO - two_step_training True
+2022-10-20 03:03:55,865 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 03:03:55,865 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 03:03:55,865 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 03:03:55,865 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 03:03:55,865 - root - INFO - orography False
+2022-10-20 03:03:55,865 - root - INFO - orography_path None
+2022-10-20 03:03:55,865 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 03:03:55,865 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 03:03:55,865 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 03:03:55,865 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 03:03:55,865 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 03:03:55,865 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 03:03:55,865 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 03:03:55,865 - root - INFO - loss l2
+2022-10-20 03:03:55,865 - root - INFO - num_data_workers 4
+2022-10-20 03:03:55,865 - root - INFO - dt 1
+2022-10-20 03:03:55,865 - root - INFO - n_history 0
+2022-10-20 03:03:55,865 - root - INFO - prediction_type iterative
+2022-10-20 03:03:55,865 - root - INFO - prediction_length 41
+2022-10-20 03:03:55,865 - root - INFO - n_initial_conditions 5
+2022-10-20 03:03:55,865 - root - INFO - ics_type default
+2022-10-20 03:03:55,865 - root - INFO - save_raw_forecasts True
+2022-10-20 03:03:55,865 - root - INFO - save_channel False
+2022-10-20 03:03:55,865 - root - INFO - masked_acc False
+2022-10-20 03:03:55,865 - root - INFO - maskpath None
+2022-10-20 03:03:55,865 - root - INFO - perturb False
+2022-10-20 03:03:55,865 - root - INFO - add_grid False
+2022-10-20 03:03:55,865 - root - INFO - N_grid_channels 0
+2022-10-20 03:03:55,866 - root - INFO - gridtype sinusoidal
+2022-10-20 03:03:55,866 - root - INFO - roll False
+2022-10-20 03:03:55,866 - root - INFO - num_blocks 8
+2022-10-20 03:03:55,866 - root - INFO - nettype afno
+2022-10-20 03:03:55,866 - root - INFO - patch_size 8
+2022-10-20 03:03:55,866 - root - INFO - width 56
+2022-10-20 03:03:55,866 - root - INFO - modes 32
+2022-10-20 03:03:55,866 - root - INFO - target default
+2022-10-20 03:03:55,866 - root - INFO - normalization zscore
+2022-10-20 03:03:55,866 - root - INFO - log_to_screen True
+2022-10-20 03:03:55,866 - root - INFO - save_checkpoint True
+2022-10-20 03:03:55,866 - root - INFO - enable_nhwc False
+2022-10-20 03:03:55,866 - root - INFO - optimizer_type FusedAdam
+2022-10-20 03:03:55,866 - root - INFO - crop_size_x None
+2022-10-20 03:03:55,866 - root - INFO - crop_size_y None
+2022-10-20 03:03:55,866 - root - INFO - plot_animations False
+2022-10-20 03:03:55,866 - root - INFO - add_noise False
+2022-10-20 03:03:55,866 - root - INFO - noise_std 0
+2022-10-20 03:03:55,866 - root - INFO - epsilon_factor 0
+2022-10-20 03:03:55,866 - root - INFO - world_size 8
+2022-10-20 03:03:55,866 - root - INFO - global_batch_size 16
+2022-10-20 03:03:55,866 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 03:03:55,866 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 03:03:55,866 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 03:03:55,866 - root - INFO - resuming False
+2022-10-20 03:03:55,866 - root - INFO - enable_amp True
+2022-10-20 03:03:55,866 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 03:03:55,866 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 03:03:55,866 - root - INFO - project ERA5_precip
+2022-10-20 03:03:55,866 - root - INFO - entity flowgan
+2022-10-20 03:03:55,866 - root - INFO - ---------------------------------------------------
+2022-10-20 03:03:55,874 - root - INFO - rank 0, begin data loader init
+2022-10-20 03:03:55,875 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 03:03:55,876 - root - INFO - Number of samples per year: 1460
+2022-10-20 03:03:55,876 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 03:03:55,876 - root - INFO - Delta t: 6 hours
+2022-10-20 03:03:55,876 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 03:03:55,877 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 03:03:55,878 - root - INFO - Number of samples per year: 1460
+2022-10-20 03:03:55,878 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 03:03:55,878 - root - INFO - Delta t: 6 hours
+2022-10-20 03:03:55,878 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 03:03:55,878 - root - INFO - rank 0, data loader initialized
+2022-10-20 05:17:12,236 - root - INFO - --------------- Versions ---------------
+2022-10-20 05:17:12,253 - root - INFO - git branch: b'* master'
+2022-10-20 05:17:12,269 - root - INFO - git hash: b'2cf0fb4541c1404c79ceec990f550d0f02af087f'
+2022-10-20 05:17:12,269 - root - INFO - Torch: 1.10.0
+2022-10-20 05:17:12,269 - root - INFO - ----------------------------------------
+2022-10-20 05:17:12,269 - root - INFO - ------------------ Configuration ------------------
+2022-10-20 05:17:12,269 - root - INFO - Configuration file: /home/ec2-user/SageMaker/goldwind/FourCastNet/config/AFNO.yaml
+2022-10-20 05:17:12,269 - root - INFO - Configuration name: afno_backbone_finetune
+2022-10-20 05:17:12,269 - root - INFO - lr 0.0001
+2022-10-20 05:17:12,269 - root - INFO - batch_size 2
+2022-10-20 05:17:12,269 - root - INFO - log_to_wandb False
+2022-10-20 05:17:12,270 - root - INFO - max_epochs 50
+2022-10-20 05:17:12,270 - root - INFO - pretrained True
+2022-10-20 05:17:12,270 - root - INFO - two_step_training True
+2022-10-20 05:17:12,270 - root - INFO - pretrained_ckpt_path /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 05:17:12,270 - root - INFO - scheduler CosineAnnealingLR
+2022-10-20 05:17:12,270 - root - INFO - in_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 05:17:12,270 - root - INFO - out_channels [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+2022-10-20 05:17:12,270 - root - INFO - orography False
+2022-10-20 05:17:12,270 - root - INFO - orography_path None
+2022-10-20 05:17:12,270 - root - INFO - exp_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind
+2022-10-20 05:17:12,270 - root - INFO - train_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train
+2022-10-20 05:17:12,270 - root - INFO - valid_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test
+2022-10-20 05:17:12,270 - root - INFO - inf_data_path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/out_of_sample
+2022-10-20 05:17:12,270 - root - INFO - time_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/time_means.npy
+2022-10-20 05:17:12,270 - root - INFO - global_means_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_means.npy
+2022-10-20 05:17:12,270 - root - INFO - global_stds_path /home/ec2-user/SageMaker/goldwind/FourCastNet/additional/stats_v0/global_stds.npy
+2022-10-20 05:17:12,270 - root - INFO - loss l2
+2022-10-20 05:17:12,271 - root - INFO - num_data_workers 4
+2022-10-20 05:17:12,271 - root - INFO - dt 1
+2022-10-20 05:17:12,271 - root - INFO - n_history 0
+2022-10-20 05:17:12,271 - root - INFO - prediction_type iterative
+2022-10-20 05:17:12,271 - root - INFO - prediction_length 41
+2022-10-20 05:17:12,271 - root - INFO - n_initial_conditions 5
+2022-10-20 05:17:12,271 - root - INFO - ics_type default
+2022-10-20 05:17:12,271 - root - INFO - save_raw_forecasts True
+2022-10-20 05:17:12,271 - root - INFO - save_channel False
+2022-10-20 05:17:12,271 - root - INFO - masked_acc False
+2022-10-20 05:17:12,271 - root - INFO - maskpath None
+2022-10-20 05:17:12,271 - root - INFO - perturb False
+2022-10-20 05:17:12,271 - root - INFO - add_grid False
+2022-10-20 05:17:12,271 - root - INFO - N_grid_channels 0
+2022-10-20 05:17:12,271 - root - INFO - gridtype sinusoidal
+2022-10-20 05:17:12,271 - root - INFO - roll False
+2022-10-20 05:17:12,271 - root - INFO - num_blocks 8
+2022-10-20 05:17:12,271 - root - INFO - nettype afno
+2022-10-20 05:17:12,271 - root - INFO - patch_size 8
+2022-10-20 05:17:12,272 - root - INFO - width 56
+2022-10-20 05:17:12,272 - root - INFO - modes 32
+2022-10-20 05:17:12,272 - root - INFO - target default
+2022-10-20 05:17:12,272 - root - INFO - normalization zscore
+2022-10-20 05:17:12,272 - root - INFO - log_to_screen True
+2022-10-20 05:17:12,272 - root - INFO - save_checkpoint True
+2022-10-20 05:17:12,272 - root - INFO - enable_nhwc False
+2022-10-20 05:17:12,272 - root - INFO - optimizer_type FusedAdam
+2022-10-20 05:17:12,272 - root - INFO - crop_size_x None
+2022-10-20 05:17:12,272 - root - INFO - crop_size_y None
+2022-10-20 05:17:12,272 - root - INFO - plot_animations False
+2022-10-20 05:17:12,272 - root - INFO - add_noise False
+2022-10-20 05:17:12,272 - root - INFO - noise_std 0
+2022-10-20 05:17:12,272 - root - INFO - epsilon_factor 0
+2022-10-20 05:17:12,272 - root - INFO - world_size 8
+2022-10-20 05:17:12,272 - root - INFO - global_batch_size 16
+2022-10-20 05:17:12,272 - root - INFO - experiment_dir /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0
+2022-10-20 05:17:12,272 - root - INFO - checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/ckpt.tar
+2022-10-20 05:17:12,272 - root - INFO - best_checkpoint_path /home/ec2-user/SageMaker/goldwind/FourCastNet/results/era5_wind/afno_backbone_finetune/0/training_checkpoints/best_ckpt.tar
+2022-10-20 05:17:12,273 - root - INFO - resuming False
+2022-10-20 05:17:12,273 - root - INFO - local_rank 0
+2022-10-20 05:17:12,273 - root - INFO - enable_amp True
+2022-10-20 05:17:12,273 - root - INFO - name afno_backbone_finetune_0
+2022-10-20 05:17:12,273 - root - INFO - group era5_precipafno_backbone_finetune
+2022-10-20 05:17:12,273 - root - INFO - project ERA5_precip
+2022-10-20 05:17:12,273 - root - INFO - entity flowgan
+2022-10-20 05:17:12,273 - root - INFO - ---------------------------------------------------
+2022-10-20 05:17:12,286 - root - INFO - rank 0, begin data loader init
+2022-10-20 05:17:12,288 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train/2013.h5
+2022-10-20 05:17:12,290 - root - INFO - Number of samples per year: 1460
+2022-10-20 05:17:12,290 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/train. Number of examples: 4380. Image Shape: 720 x 1440 x 20
+2022-10-20 05:17:12,290 - root - INFO - Delta t: 6 hours
+2022-10-20 05:17:12,290 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 05:17:12,292 - root - INFO - Getting file stats from /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test/2016.h5
+2022-10-20 05:17:12,293 - root - INFO - Number of samples per year: 1460
+2022-10-20 05:17:12,293 - root - INFO - Found data at path /home/ec2-user/SageMaker/goldwind/FourCastNet/data/FCN_ERA5_data_v0/test. Number of examples: 2920. Image Shape: 720 x 1440 x 20
+2022-10-20 05:17:12,293 - root - INFO - Delta t: 6 hours
+2022-10-20 05:17:12,293 - root - INFO - Including 0 hours of past history in training at a frequency of 6 hours
+2022-10-20 05:17:12,293 - root - INFO - rank 0, data loader initialized
+2022-10-20 05:17:17,864 - root - INFO - Starting from pretrained one-step afno model at /home/ec2-user/SageMaker/goldwind/FourCastNet/model_weights/FCN_weights_v0/backbone.ckpt
+2022-10-20 05:17:18,363 - root - INFO - Number of trainable model parameters: 74691840
+2022-10-20 05:17:18,363 - root - INFO - Starting Training Loop...
+2022-10-20 06:30:19,664 - root - INFO - Time taken for epoch 1 is 4381.300950050354 sec
+2022-10-20 06:30:19,665 - root - INFO - Train loss: 0.17573826014995575. Valid loss: 0.18414832651615143
+2022-10-20 06:38:23,900 - root - INFO - Time taken for epoch 2 is 484.2356307506561 sec
+2022-10-20 06:38:23,901 - root - INFO - Train loss: 0.17131011188030243. Valid loss: 0.18526984751224518
+2022-10-20 06:46:43,211 - root - INFO - Time taken for epoch 3 is 499.3099842071533 sec
+2022-10-20 06:46:43,211 - root - INFO - Train loss: 0.17232325673103333. Valid loss: 0.18391314148902893
+2022-10-20 06:54:04,183 - root - INFO - Time taken for epoch 4 is 440.9717857837677 sec
+2022-10-20 06:54:04,184 - root - INFO - Train loss: 0.1721215546131134. Valid loss: 0.18459682166576385
+2022-10-20 07:01:27,017 - root - INFO - Time taken for epoch 5 is 442.83300971984863 sec
+2022-10-20 07:01:27,017 - root - INFO - Train loss: 0.17182372510433197. Valid loss: 0.18382927775382996
+2022-10-20 07:08:43,267 - root - INFO - Time taken for epoch 6 is 436.2498347759247 sec
+2022-10-20 07:08:43,268 - root - INFO - Train loss: 0.1693079024553299. Valid loss: 0.1845141351222992
+2022-10-20 07:15:58,283 - root - INFO - Time taken for epoch 7 is 435.0151479244232 sec
+2022-10-20 07:15:58,284 - root - INFO - Train loss: 0.16989052295684814. Valid loss: 0.18471519649028778
+2022-10-20 07:23:03,030 - root - INFO - Time taken for epoch 8 is 424.7463228702545 sec
+2022-10-20 07:23:03,031 - root - INFO - Train loss: 0.17077253758907318. Valid loss: 0.18408772349357605
+2022-10-20 07:30:10,598 - root - INFO - Time taken for epoch 9 is 427.5672791004181 sec
+2022-10-20 07:30:10,598 - root - INFO - Train loss: 0.17220960557460785. Valid loss: 0.18403328955173492
+2022-10-20 07:37:16,144 - root - INFO - Time taken for epoch 10 is 425.54580330848694 sec
+2022-10-20 07:37:16,145 - root - INFO - Train loss: 0.16918672621250153. Valid loss: 0.18396031856536865
+2022-10-20 07:44:25,961 - root - INFO - Time taken for epoch 11 is 429.81646609306335 sec
+2022-10-20 07:44:25,962 - root - INFO - Train loss: 0.16892161965370178. Valid loss: 0.1844688206911087
+2022-10-20 07:51:30,817 - root - INFO - Time taken for epoch 12 is 424.85523223876953 sec
+2022-10-20 07:51:30,817 - root - INFO - Train loss: 0.16938334703445435. Valid loss: 0.18501423299312592
+2022-10-20 07:58:38,351 - root - INFO - Time taken for epoch 13 is 427.53333854675293 sec
+2022-10-20 07:58:38,351 - root - INFO - Train loss: 0.1677565574645996. Valid loss: 0.1842491328716278
+2022-10-20 08:05:44,522 - root - INFO - Time taken for epoch 14 is 426.17028999328613 sec
+2022-10-20 08:05:44,522 - root - INFO - Train loss: 0.16598749160766602. Valid loss: 0.18424245715141296
+2022-10-20 08:12:53,075 - root - INFO - Time taken for epoch 15 is 428.5528881549835 sec
+2022-10-20 08:12:53,075 - root - INFO - Train loss: 0.17018046975135803. Valid loss: 0.18430738151073456
+2022-10-20 08:19:57,827 - root - INFO - Time taken for epoch 16 is 424.7510633468628 sec
+2022-10-20 08:19:57,827 - root - INFO - Train loss: 0.16739912331104279. Valid loss: 0.1843758523464203
+2022-10-20 08:27:05,266 - root - INFO - Time taken for epoch 17 is 427.43886494636536 sec
+2022-10-20 08:27:05,266 - root - INFO - Train loss: 0.17022836208343506. Valid loss: 0.1841977834701538
+2022-10-20 08:34:10,644 - root - INFO - Time taken for epoch 18 is 425.37702894210815 sec
+2022-10-20 08:34:10,644 - root - INFO - Train loss: 0.16963109374046326. Valid loss: 0.18441440165042877
+2022-10-20 08:41:16,136 - root - INFO - Time taken for epoch 19 is 425.4916660785675 sec
+2022-10-20 08:41:16,136 - root - INFO - Train loss: 0.16990426182746887. Valid loss: 0.18410798907279968
+2022-10-20 08:48:27,602 - root - INFO - Time taken for epoch 20 is 431.46627473831177 sec
+2022-10-20 08:48:27,603 - root - INFO - Train loss: 0.1686793714761734. Valid loss: 0.1838177740573883
+2022-10-20 08:55:32,381 - root - INFO - Time taken for epoch 21 is 424.7776417732239 sec
+2022-10-20 08:55:32,381 - root - INFO - Train loss: 0.16644257307052612. Valid loss: 0.1843821406364441
+2022-10-20 09:02:40,291 - root - INFO - Time taken for epoch 22 is 427.9099135398865 sec
+2022-10-20 09:02:40,291 - root - INFO - Train loss: 0.17045122385025024. Valid loss: 0.18397685885429382
+2022-10-20 09:09:45,038 - root - INFO - Time taken for epoch 23 is 424.7462513446808 sec
+2022-10-20 09:09:45,038 - root - INFO - Train loss: 0.1663716435432434. Valid loss: 0.1839352697134018
+2022-10-20 09:16:49,989 - root - INFO - Time taken for epoch 24 is 424.95079708099365 sec
+2022-10-20 09:16:49,989 - root - INFO - Train loss: 0.16855888068675995. Valid loss: 0.18388612568378448
+2022-10-20 09:23:59,117 - root - INFO - Time taken for epoch 25 is 429.1273021697998 sec
+2022-10-20 09:23:59,117 - root - INFO - Train loss: 0.16540761291980743. Valid loss: 0.1836458444595337
+2022-10-20 09:31:09,533 - root - INFO - Time taken for epoch 26 is 430.41537380218506 sec
+2022-10-20 09:31:09,533 - root - INFO - Train loss: 0.16428051888942719. Valid loss: 0.1838805377483368
+2022-10-20 09:38:15,971 - root - INFO - Time taken for epoch 27 is 426.4376630783081 sec
+2022-10-20 09:38:15,971 - root - INFO - Train loss: 0.16769084334373474. Valid loss: 0.1838482916355133
+2022-10-20 09:45:21,626 - root - INFO - Time taken for epoch 28 is 425.654988527298 sec
+2022-10-20 09:45:21,627 - root - INFO - Train loss: 0.1662692427635193. Valid loss: 0.1837601661682129
+2022-10-20 09:52:30,519 - root - INFO - Time taken for epoch 29 is 428.89196610450745 sec
+2022-10-20 09:52:30,519 - root - INFO - Train loss: 0.16375350952148438. Valid loss: 0.1835944950580597
+2022-10-20 09:59:36,289 - root - INFO - Time taken for epoch 30 is 425.76992630958557 sec
+2022-10-20 09:59:36,290 - root - INFO - Train loss: 0.1661866307258606. Valid loss: 0.1836167424917221
+2022-10-20 10:06:41,488 - root - INFO - Time taken for epoch 31 is 425.1981930732727 sec
+2022-10-20 10:06:41,489 - root - INFO - Train loss: 0.16369692981243134. Valid loss: 0.18377599120140076
+2022-10-20 10:13:46,246 - root - INFO - Time taken for epoch 32 is 424.75694012641907 sec
+2022-10-20 10:13:46,246 - root - INFO - Train loss: 0.16244912147521973. Valid loss: 0.18362124264240265
+2022-10-20 10:20:58,826 - root - INFO - Time taken for epoch 33 is 432.5796298980713 sec
+2022-10-20 10:20:58,826 - root - INFO - Train loss: 0.1649886518716812. Valid loss: 0.18357907235622406
+2022-10-20 10:28:03,035 - root - INFO - Time taken for epoch 34 is 424.2086384296417 sec
+2022-10-20 10:28:03,035 - root - INFO - Train loss: 0.1675897240638733. Valid loss: 0.18360012769699097
+2022-10-20 10:35:10,789 - root - INFO - Time taken for epoch 35 is 427.75325655937195 sec
+2022-10-20 10:35:10,789 - root - INFO - Train loss: 0.16357040405273438. Valid loss: 0.18358060717582703
+2022-10-20 10:42:21,185 - root - INFO - Time taken for epoch 36 is 430.39565563201904 sec
+2022-10-20 10:42:21,185 - root - INFO - Train loss: 0.16380275785923004. Valid loss: 0.18355628848075867
+2022-10-20 10:49:30,119 - root - INFO - Time taken for epoch 37 is 428.93371653556824 sec
+2022-10-20 10:49:30,120 - root - INFO - Train loss: 0.16219201683998108. Valid loss: 0.18331186473369598
+2022-10-20 10:56:35,541 - root - INFO - Time taken for epoch 38 is 425.42136788368225 sec
+2022-10-20 10:56:35,541 - root - INFO - Train loss: 0.16435158252716064. Valid loss: 0.18336056172847748
+2022-10-20 11:03:40,262 - root - INFO - Time taken for epoch 39 is 424.72059202194214 sec
+2022-10-20 11:03:40,263 - root - INFO - Train loss: 0.16427241265773773. Valid loss: 0.18338724970817566
+2022-10-20 11:10:51,227 - root - INFO - Time taken for epoch 40 is 430.96400117874146 sec
+2022-10-20 11:10:51,227 - root - INFO - Train loss: 0.16758689284324646. Valid loss: 0.18331976234912872
+2022-10-20 11:18:03,241 - root - INFO - Time taken for epoch 41 is 432.0132908821106 sec
+2022-10-20 11:18:03,241 - root - INFO - Train loss: 0.16704562306404114. Valid loss: 0.18320931494235992
+2022-10-20 11:25:12,370 - root - INFO - Time taken for epoch 42 is 429.12905764579773 sec
+2022-10-20 11:25:12,371 - root - INFO - Train loss: 0.16242416203022003. Valid loss: 0.18332482874393463
+2022-10-20 11:32:20,573 - root - INFO - Time taken for epoch 43 is 428.2020447254181 sec
+2022-10-20 11:32:20,573 - root - INFO - Train loss: 0.1642378270626068. Valid loss: 0.183233380317688
+2022-10-20 11:39:25,758 - root - INFO - Time taken for epoch 44 is 425.1846013069153 sec
+2022-10-20 11:39:25,758 - root - INFO - Train loss: 0.16210971772670746. Valid loss: 0.18323136866092682
+2022-10-20 11:46:30,949 - root - INFO - Time taken for epoch 45 is 425.19041872024536 sec
+2022-10-20 11:46:30,949 - root - INFO - Train loss: 0.1653815656900406. Valid loss: 0.18321344256401062
+2022-10-20 11:53:39,767 - root - INFO - Time taken for epoch 46 is 428.8178081512451 sec
+2022-10-20 11:53:39,768 - root - INFO - Train loss: 0.16534548997879028. Valid loss: 0.18329235911369324
+2022-10-20 12:00:48,767 - root - INFO - Time taken for epoch 47 is 428.99949169158936 sec
+2022-10-20 12:00:48,768 - root - INFO - Train loss: 0.16166602075099945. Valid loss: 0.18316619098186493
+2022-10-20 12:07:56,915 - root - INFO - Time taken for epoch 48 is 428.1469922065735 sec
+2022-10-20 12:07:56,915 - root - INFO - Train loss: 0.164933979511261. Valid loss: 0.18313874304294586
+2022-10-20 12:15:06,572 - root - INFO - Time taken for epoch 49 is 429.6570072174072 sec
+2022-10-20 12:15:06,573 - root - INFO - Train loss: 0.16450506448745728. Valid loss: 0.18315069377422333
+2022-10-20 12:22:10,061 - root - INFO - Terminating training after reaching params.max_epochs while LR scheduler is set to CosineAnnealingLR
